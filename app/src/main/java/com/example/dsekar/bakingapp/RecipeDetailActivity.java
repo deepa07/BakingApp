@@ -128,7 +128,7 @@ public class RecipeDetailActivity extends AppCompatActivity implements RecipeInt
 
     @Override
     public void onStepClicked(Step step) {
-        if (!RecipeUtils.isConnectedToInternet() && !step.getVideoURL().isEmpty()) {
+        if (!RecipeUtils.isConnectedToInternet()) {
             RecipeUtils.setSnackBar(findViewById(R.id.receipe_detail_recycler_view), getResources().getString(R.string.no_connection)
                     , Snackbar.LENGTH_SHORT, getResources().getColor(R.color.black));
             return;
