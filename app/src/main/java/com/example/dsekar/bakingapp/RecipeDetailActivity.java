@@ -74,17 +74,17 @@ public class RecipeDetailActivity extends AppCompatActivity implements RecipeInt
         String imageName = recipe.getName();
         int imageId = R.drawable.recipe_icon_md;
         switch (imageName) {
-            case "Nutella Pie":
+            case AppConstants.nutella_pie:
                 imageId = R.drawable.ic_nutella_pie;
                 break;
-            case "Brownies":
-                imageId = R.drawable.ic_nutella_pie;
+            case AppConstants.brownies:
+                imageId = R.drawable.ic_brownie;
                 break;
-            case "Yellow Cake":
-                imageId = R.drawable.ic_nutella_pie;
+            case AppConstants.yellow_cake:
+                imageId = R.drawable.ic_yellowcake;
                 break;
-            case "Cheesecake":
-                imageId = R.drawable.ic_nutella_pie;
+            case AppConstants.cheesecake:
+                imageId = R.drawable.ic_cheesecake;
                 break;
         }
         ImageView defaultImageView = findViewById(R.id.recipe_default_image);
@@ -123,7 +123,6 @@ public class RecipeDetailActivity extends AppCompatActivity implements RecipeInt
 
             RecipeWidget.UpdateSingleRecipe();
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -146,5 +145,11 @@ public class RecipeDetailActivity extends AppCompatActivity implements RecipeInt
             stepIntent.putExtra(Step, step);
             startActivity(stepIntent);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, MainActivity.class));
     }
 }

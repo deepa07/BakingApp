@@ -19,4 +19,9 @@ public class AppConstants {
 
     public static final String PREFERENCE_SINGLE_RECIPE_ID  = "MySingleRecipeId";
 
+    public static final String nutella_pie = "Nutella Pie";
+    public static final String brownies = "Brownies";
+    public static final String yellow_cake = "Yellow Cake";
+    public static final String cheesecake = "Cheesecake";
+
 }

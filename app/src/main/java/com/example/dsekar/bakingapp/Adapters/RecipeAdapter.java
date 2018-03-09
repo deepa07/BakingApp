@@ -43,23 +43,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
                     .placeholder(R.drawable.recipe_icon_md)
                     .error(R.drawable.ic_error_outline_black_24dp).into(holder.RecipePoster);
         } else {
-            int imageId = R.drawable.recipe_icon_md;
-            String imageName = recipe.getName();
-            switch (imageName){
-                case "Nutella Pie" :
-                    imageId = R.drawable.ic_nutella_pie;
-                    break;
-                case "Brownies" :
-                    imageId = R.drawable.ic_brownie;
-                    break;
-                case "Yellow Cake" :
-                    imageId = R.drawable.ic_yellowcake;
-                    break;
-                case "Cheesecake" :
-                    imageId = R.drawable.ic_cheesecake;
-                    break;
-            }
-            Picasso.with(mContext).load(imageId)
+            Picasso.with(mContext).load(R.drawable.recipe_icon_md)
                     .placeholder(R.drawable.progress_animation).into(holder.RecipePoster);
         }
     }
